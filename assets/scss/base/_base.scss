@@ -1,0 +1,58 @@
+@import '../variable/variable';
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    color: $primary-color;
+}
+a {
+    text-decoration: none;
+    color: $primary-color;
+    &:hover {
+        color: $secondary-color;
+    }
+    &.active {
+        font-size: $text-2xl;
+        font-weight: $fw-normal;
+        color: $secondary-color !important;;
+    }
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ul, li {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+}
+
+.primary-btn {
+    @include mButton($text-small, $fw-semi, $text-white, $secondary-color, $p-3 $p-5, 1px solid $secondary-color, 50px, $bg-white, $secondary-color);
+    -webkit-box-shadow: 0 0 0 3em $secondary-color inset;
+    box-shadow: 0 0 0 3em $secondary-color inset;
+    &:hover {
+        -webkit-box-shadow: 0 0 0 3em $bg-white inset;
+        box-shadow: 0 0 0 3em $bg-white inset;
+    }
+}
+
+.subtitle {
+    @include mText($text-base, $fw-semi, $secondary-color);
+}
+
+.title {
+    @include mText($text-5xl, $fw-bold, $primary-color);
+}
+
+.subtitle-small {
+    @include mText($text-tiny, $fw-semi, $secondary-color);
+}
+
+.title-small {
+    @include mText($text-xl, $fw-bold, $primary-color);
+}

@@ -1,0 +1,21 @@
+//mixin: tương tự hàm tuy nhiên không có xử lý return 
+@mixin mText($fontSize: $text-base, $fontWeight: $fw-normal, $color: $primary-color) {
+    //default params (giá trị mặc định)
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $color;
+}
+
+@mixin mButton($fontSize, $fontWeight, $color, $bg, $p, $bd, $br, $bg-hover, $color-hover) {
+    @include mText($fontSize, $fontWeight , $color );
+    background: $bg;
+    padding: $p;
+    border: $bd;
+    border-radius: $br;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover {
+        color: $color-hover;
+        background: $bg-hover;
+    }
+}
