@@ -2,31 +2,51 @@
 @import './base/base';
 @import './variable/_variable.scss';
 
+/* Carousel Hero */
+#banner-hero-carousel .carousel-indicators li {
+    margin-top: -50px;
+}
+#banner-hero-carousel .carousel-control-next svg,
+#banner-hero-carousel .carousel-control-prev svg {
+    color: $secondary-color;
+    font-size: 2.5em;
+}
+#banner-hero-carousel .carousel-item{
+    min-height: 600px;
+}
+#banner-hero-carousel .bg-overlay{
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
 
 //nesting css
 .header {
     z-index: 2;
     width: 100%;
-    position: absolute;
     background-color: transparent;
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
-    .container {
-        // @media screen and (max-width: 768px) {
-        //     display: block;
-        //     height: 100%;
-        // }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
+    .navbar-dark{
+        background: black;
+    }
+    #main-nav {
+        ul{
+            gap: 40px;
+            li{
+                a{
+                    color: black;
+                    font-weight: 500;
+                }
+            }
         }
+    }
+    .container {
         .logo {
             img {
-                height: 80px;
+                height: 40px;
             }
         }
         .menu {
@@ -95,167 +115,138 @@
     }
 }
 
-.about-us {
-    position: relative;
-    padding-top: $m-8 * 2;
-    padding-bottom: $m-8 * 2; 
-    &:before, &:after{
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-size: 100%;
-        background-repeat: no-repeat;
-    }
-    &:before{
-        background-image: url(../img/yellow_top_wave_01.png);
-    }
-    &:after{
-        background-image: url(../img/Violet_top_left_wave.png);
-        background-position-y: bottom;
-    }
-    .content-wrap{
-        position: relative;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        .item {
-            width: 50%;
+.product-list {
+    .card{
+        background: #F8F8F8;
+        border: none;
+        .card-img-top{
+            height: 250px;
+            object-fit: contain;
         }
-    }
-}
-
-.teams {
-    position: relative;
-    padding-top: $m-8 * 2;
-    padding-bottom: $m-8 * 2; 
-    background-color: #dcd1f3;
-   &:after{
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-image: url(../img/Wave_White_bottom_right_shape_01.png);
-        background-position-y: bottom;
-    }
-    .content-wrap{
-        position: relative;
-        z-index: 1;
-        .team-list {
+        .card-name{
+            text-transform: capitalize;
+        }
+        .card-meta{
             display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .item {
-            width: 25%;
-            padding: 20px;
-            .card{
-                border-radius: 10px;
-                background: #fff;
-                overflow: hidden;
+            a, span{
+                flex: 0 50%;
+                padding: 15px 30px;
+            }
+            a{
                 text-align: center;
+                background: #F8B653;
+                &:hover{
+                    color: white;
+                }
             }
-            .card-body{
-                padding: $p-7;
-            }
-            .title-small {
-                margin-top: $m-2;
-            }
-            .desc {
-                margin-top: $m-4;
-                line-height: 1.7;
-                @include mText($text-small, $fw-normal, $primary-color);
+            span{
+                text-align: right;
+                background: #ccc;
             }
         }
     }
 }
-
-.courses {
-    position: relative;
-    padding-top: $m-8 * 2;
-    padding-bottom: $m-8 * 2; 
-    &:after{
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-image: url(../img/accent_bottom_wave_01.png);
-        background-position-y: bottom;
+#related-product, #resgiter{
+    padding-bottom: 60px;
+}
+#product-detail {
+    .product-info{
+        padding-left: 80px;
     }
-    .content-wrap{
-        position: relative;
-        z-index: 1;
+    .product-image{
+        padding: 30px;
+        background: #F8F8F8;
+    }
+    .product-title{
+        text-transform: capitalize;
+    }
+    .product-desc{
+        text-align: justify;
+    }
+    .available-size{
+       color: #1ED90E;
+    }
+    .product-size{
         display: flex;
-        align-items: center;
-        .item-left {
-            width: 60%;
+        padding: 0;
+        gap: 15px;
+        li{
+            background: #ccc;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                background: $secondary-color;
+            }
         }
-        .item-right {
-            width: 40%;
+    }
+    .product-price{
+        color: #FC0303;
+    }
+    .product-quantity{
+        display: flex;
+        span{
+            background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+            display: block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
         }
+        input{
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border: none;
+        }
+    }
+}
+
+#register-form{
+    .form-control{
+        width: 80%;
+        margin: auto;
+        border: none;
+        border-bottom: 2px solid $border-dark;
+        border-radius: 0;
+    }
+    .pl-10{
+        padding-left: 10%;
+        display: flex;
+        gap: 15px;
     }
 }
 
 .footer{
-    color: $text-white;
-    background-image: url(../img/footer_background.jpg);
-    background-size: cover;
-    padding-top: $m-8 * 4;
-    padding-bottom: $m-8 * 4;
-    aspect-ratio: 1690/560;
-    .content-list {
-        width: 100%;
-        display: flex;
-        .content-item {
-            flex: 1;
-            h3 {
-                font-size: $text-2xl;
-            }
-            ul {
-                margin-top: $m-7;
-                &.contact {
-                    + .social {
-                        margin-top: $m-6;
-                    }
-                }
-                &.links {
-                    li {
-                        position: relative;
-                        padding-bottom: $p-4;
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 70px;
-                            border-bottom: 1px solid rgba($border-dark, .1);
-                        }
-                    }
-                }
-            }
-            li {
-                font-size: $text-small;
-                + li {
-                    margin-top: $m-3;
-                }
-            }
-        }
-    }
-    a {
-        color: $text-white;
-    }
+    font-size: 12px;
     .container{
-        display: flex;
-        justify-content: space-between;
-        .copy{
-            @include mText();
+        max-width: 70%;
+    }
+    .footer-item{
+        border-left: 1px solid #d8d8d8;
+        padding-left: 25px;
+        h5{
+            font-size: 14px;
+            font-weight: 600;
         }
-        .menu-footer{
-            a{
-                @include mText();
-                @extend .mx-2;
-            }
+    }
+
+    .footer-top{
+        background: #F8F8F8;
+        .footer-item:first-child{
+            border: none;
+        }
+    }
+
+    .footer-bottom{
+        background: #e7e7e7;
+        .footer-item:first-child{
+            border: none;
         }
     }
 }

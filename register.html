@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe shop - Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/scss/index.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark shadow">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                    <img src="assets/images/logo.png">
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                    <div class="flex-fill">
+                        <ul class="nav navbar-nav d-flex justify-content-end mx-lg-auto gap-4">
+                            <li class="nav-item">
+                                <a class="icon-link text-white" href="#">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="icon-link text-white" href="#">
+                                    Login
+                                </a>
+                            </li>
+                            <li class="nav-item">    
+                                <a class="icon-link text-white" href="#">
+                                    Register
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <nav id="main-nav" class="navbar navbar-default">
+            <div class="container">
+                <ul class="navbar-nav bd-navbar-nav flex-row">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="">Men</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " href="">Woman</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="">Kid</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="">Sport</a>
+                    </li>
+                  </ul>
+            </div>
+          </nav>
+    </header>
+    <!-- Close Header -->
+    
+    <section id="resgiter">
+        <div class="container py-5">
+            <div class="row text-center py-4">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1"> Resgister </h1>
+                </div>
+            </div>
+            <form id="register-form">
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-3">
+                        <input type="email" placeholder="Email" class="form-control input-data" id="email" name="email">
+                        <p class="text-danger input-error-message" id="emailErrorMess"></p>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <input type="text" placeholder="Name" class="form-control input-data" id="name" name="name">
+                        <p class="text-danger input-error-message" id="userNameErrorMess"></p>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <input type="password" placeholder="Password" class="form-control input-data" id="password" name="password">
+                        <p class="text-danger input-error-message" id="paswordErrorMess"></p>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <input type="text" placeholder="Phone" class="form-control input-data" id="phone" name="phone">
+                        <p class="text-danger input-error-message" id="phoneErrorMess"></p>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <input type="password" placeholder="Password confirm" class="form-control input-data" id="confirm-password" name="confirm-password">
+                        <p class="text-danger input-error-message" id="confirmPasswordErrorMess"></p>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="pl-10">
+                            <span>Gender</span>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" checked type="radio" name="gender" id="inlineRadio1" value="true">
+                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="false">
+                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="pl-10">
+                            <button type="submit" class="btn primary-btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+        
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row py-4">
+                    <div class="footer-item col-12 col-md-4">
+                        <h5>GET HELP</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact Us</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Shopping</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item col-12 col-md-4">
+                        <h5>ORDERS</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact Us</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Shopping</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item col-12 col-md-4">
+                        <h5>REGISTER</h5>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row py-4">
+                    <div class="footer-item col-12 col-md-4">
+                        <h5>GET HELP</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact Us</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Shopping</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item col-12 col-md-4">
+                        <h5>ORDERS</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact Us</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Shopping</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item col-12 col-md-4">
+                        <h5>REGISTER</h5>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js" integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js" integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="module" src="./customer/controllers/Home.js"></script>
+    <script type="module" src="./customer/controllers/ProductDetail.js"></script>
+    <script type="module" src="./customer/controllers/Register.js"></script>
+</body>
+
+</html>
